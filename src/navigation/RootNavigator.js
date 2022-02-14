@@ -8,7 +8,7 @@ import {
     COLORS
 } from '../utilities/colors';
 
-// import AntDesign from 'react-native-vector-icons/AntDesign';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,11 +23,11 @@ const RootNavigator = () => {
                         let iconName;
 
                         if (route.name === HOME_SCREEN.MOVIE_SCREEN) {
-                            iconName = 'rocket1';
+                            iconName = 'youtube';
                         } else if (route.name === HOME_SCREEN.FAVOURITE_MOVIE_SCREEN) {
-                            iconName = 'calendar';
+                            iconName = 'heart';
                         }
-                        return null;
+                        return <AntDesign name={iconName} size={size} color={color} />;
                     },
                     tabBarActiveTintColor: COLORS.primary,
                     tabBarInactiveTintColor: COLORS.gray1,
