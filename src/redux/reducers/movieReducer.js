@@ -1,14 +1,14 @@
 import {
-    SET_MOVIE_LIST,
+    UPDATE_MOVIE_LIST
 } from '../types';
 
 const INITIAL_STATE = {
-    movieList : false,
+    movieList : [],
 };
 
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case SET_MOVIE_LIST:
+        case UPDATE_MOVIE_LIST:
             return {
                 ...state,
                 movieList: action.payload,

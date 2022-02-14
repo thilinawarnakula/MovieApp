@@ -1,7 +1,5 @@
 import axios from 'axios';
-
-const API_KEY = 'AIzaSyB5mUJfy20sj5ozvg_38GxSk_TI2dts_go';
-
+import { API_KEY } from '../../utilities/constants';
 export default class Api {
 
   axiosApi;
@@ -11,7 +9,7 @@ export default class Api {
       baseURL: baseUrl,
       params: {
         part : 'snippet',
-        key : API_KEY
+        key : API_KEY,
       },
     });
 

@@ -1,9 +1,10 @@
 import {
-    SET_MOVIE_LIST
+    UPDATE_MOVIE_LIST
 } from '../types';
 
 
-export const setMovieList = (list) => ({
-    type: SET_MOVIE_LIST,
+export const updateMovieList= (list) => ({
+    type: UPDATE_MOVIE_LIST,
     payload: list
 });
+
