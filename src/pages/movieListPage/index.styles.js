@@ -11,11 +11,21 @@ const style = EStyleSheet.create({
         flex: 1,
         marginHorizontal : '20rem',
         marginTop : '10rem',
-        marginBottom : '40rem'
+        marginBottom : '40rem',
+    },
+    loaderContainer:{
+        justifyContent:'center',
+        alignItems:'center'
     },
     listViewContainer:{
         padding: '20rem',
-    }
+    },
+    loadingView :{
+        width : '60rem',
+        height : '22rem',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
 });
 
 export default style;

@@ -6,7 +6,7 @@ import {
 import { MOVIE_LISTS } from '../../utilities/constants';
 
 import CustomTextView from '../customTextView/index.component';
-import GridCard from '../gridCard/index.component';
+import MenuCard from '../menuCard/index.component';
 
 import { HOME_SCREEN } from '../../navigation/NavigationConstants';
 
@@ -28,26 +28,15 @@ const MainListView = (props) => {
         });
     };
 
-    const renderItemGrid = ({ item, index }) => {
+    const renderItem = ({ item, index }) => {
         return (
-            <GridCard
+            <MenuCard
                 key={item?.id}
                 videoName={item?.snippet?.title}
                 videoImage={item?.snippet.thumbnails?.default?.url}
                 onPress={() => onPressItem(item)}
                 index={index}
-            />
-        )
-    };
-
-    const renderItemList = ({ item, index }) => {
-        return (
-            <GridCard
-                key={item?.id}
-                videoName={item?.snippet?.title}
-                videoImage={item?.snippet.thumbnails?.default?.url}
-                onPress={() => onPressItem(item)}
-                index={index}
+                listType={listType}
             />
         )
     };
@@ -55,7 +44,7 @@ const MainListView = (props) => {
     const renderVideoListContainer = () => (
         <FlatList
             data={playListItems}
-            renderItem={listType == MOVIE_LISTS.MOVIES_IN_GRID ? renderItemGrid : renderItemGrid}
+            renderItem={renderItem}
             showsVerticalScrollIndicator={false}
             showsHorizontalScrollIndicator={false}
             keyExtractor={(item) => item.id}

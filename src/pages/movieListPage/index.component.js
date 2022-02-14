@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {
     SafeAreaView,
-    FlatList
+    FlatList,
+    View
 } from 'react-native';
 
 import { connect, useDispatch } from 'react-redux';
@@ -20,6 +21,7 @@ import {
 } from './index.controller';
 
 import ListMenu from '../../components/listMenu/index.component';
+import Loader from '../../components/loader/index.component';
 
 const MovieListPage = (props) => {
 
@@ -98,10 +100,17 @@ const MovieListPage = (props) => {
         />
     );
 
+    const renderFullLoadingIndicator = () => ((isLoading) ? (
+        <View style={styles.loadingView}>
+            <Loader />
+        </View>
+    ) : null);
+
     return (
-        <SafeAreaView style={styles.mainContainer}>
-            {renderMovieListSelection()}
-            {renderFlatListContainer()}
+        <SafeAreaView style={!isLoading ? styles.mainContainer : [styles.mainContainer,styles.loaderContainer]}>
+            {!isLoading && renderMovieListSelection()}
+            {!isLoading && renderFlatListContainer()}
+            {renderFullLoadingIndicator()}
         </SafeAreaView>
     )
 }
