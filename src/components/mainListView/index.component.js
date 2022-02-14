@@ -33,7 +33,7 @@ const MainListView = (props) => {
             <MenuCard
                 key={item?.id}
                 videoName={item?.snippet?.title}
-                videoImage={item?.snippet.thumbnails?.default?.url}
+                videoImage={item?.snippet.thumbnails?.medium?.url}
                 onPress={() => onPressItem(item)}
                 index={index}
                 listType={listType}
