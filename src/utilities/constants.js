@@ -15,4 +15,7 @@ export const MOVIE_LISTS = {
     MOVIES_IN_GRID: 'MOVIES_IN_GRID',
 };
 
+export const OPEN_VIDEO = 'https://www.youtube.com/watch?v=';
+
+
 

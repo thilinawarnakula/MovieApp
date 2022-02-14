@@ -8,8 +8,6 @@ import { MOVIE_LISTS } from '../../utilities/constants';
 import CustomTextView from '../customTextView/index.component';
 import MenuCard from '../menuCard/index.component';
 
-import { HOME_SCREEN } from '../../navigation/NavigationConstants';
-
 import styles from './index.styles';
 
 const MainListView = (props) => {
@@ -19,24 +17,17 @@ const MainListView = (props) => {
         playListTitle,
         playListItems,
         listType,
-        index
+        index,
+        navigation
     } = props;
-
-    const onPressItem = (item) => {
-        navigation.navigate(HOME_SCREEN.DETAILS_PAGE, {
-            item
-        });
-    };
 
     const renderItem = ({ item, index }) => {
         return (
             <MenuCard
                 key={item?.id}
-                videoName={item?.snippet?.title}
-                videoImage={item?.snippet.thumbnails?.medium?.url}
-                onPress={() => onPressItem(item)}
-                index={index}
+                videoItem={item}     
                 listType={listType}
+                navigation={navigation}
             />
         )
     };

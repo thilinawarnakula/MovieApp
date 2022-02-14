@@ -8,6 +8,8 @@ export const COLORS = {
     transparent: 'transparent',
     gray1:'#575761',
     gray2:'#EAEAEA',
+    gray3:'#333',
     red:'#EA5C2B',
-    green:'#95CD41'
+    green:'#95CD41',
+    red:'#FF0000'
 };

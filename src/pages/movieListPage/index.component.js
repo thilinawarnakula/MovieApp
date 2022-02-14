@@ -26,7 +26,8 @@ import Loader from '../../components/loader/index.component';
 const MovieListPage = (props) => {
 
     const {
-        movieList
+        movieList,
+        navigation
     } = props;
 
     const [listType, setListType] = useState(MOVIE_LISTS.MOVIES_IN_GRID);
@@ -83,6 +84,7 @@ const MovieListPage = (props) => {
                 playListItems={item?.playListItems}
                 listType={listType}
                 index={index}
+                navigation={navigation}
 
             />
         )
