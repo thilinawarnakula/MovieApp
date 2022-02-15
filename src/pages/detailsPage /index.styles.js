@@ -26,7 +26,7 @@ const styles = EStyleSheet.create({
     flexDirection: 'row',
   },
   watchVideoTitle:{
-    color:COLORS.red,
+    color:COLORS.textRed,
     marginLeft:'10rem',
     marginTop:'5rem',
     fontSize : '14rem',
@@ -60,7 +60,7 @@ const styles = EStyleSheet.create({
       width: 2, height: 2
     },
     textShadowRadius: 10,
-    textShadowColor: COLORS.gray3,
+    textShadowColor: COLORS.shadowGray,
     fontWeight: "bold",
     color: COLORS.white
   },
@@ -69,7 +69,7 @@ const styles = EStyleSheet.create({
       width: 2, height: 2
     },
     textShadowRadius: 15,
-    textShadowColor: COLORS.gray3
+    textShadowColor: COLORS.shadowGray
   },
   videoDetails: {
     marginTop : 20,

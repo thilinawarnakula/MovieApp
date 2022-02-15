@@ -1,9 +1,7 @@
 
 export const COLORS = {
     primary: '#007aff',
-    primaryLight:'#648381',
     white : '#ffffff',
-    white2: '#E4FDE1',
     headerWhite:'#f6f6f7',
     black:'#000000',
     transparent: 'transparent',
@@ -12,11 +10,8 @@ export const COLORS = {
     headerGray:'#D3D3D3',
     headerWhite:'#f5f5f6',
     textInputGray:'#efeff4',
-    gray1:'#575761',
-    gray2:'#EAEAEA',
-    gray3:'#333',
-    red:'#EA5C2B',
-    green:'#95CD41',
-    red:'#FF0000',
+    tabUnselectedGray:'#575761',
+    shadowGray:'#333',
+    textRed:'#EA5C2B',
     starRed:'#cc002e'
 };

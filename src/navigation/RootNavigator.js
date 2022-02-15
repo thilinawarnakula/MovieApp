@@ -30,7 +30,7 @@ const RootNavigator = () => {
                         return <AntDesign name={iconName} size={size} color={color} />;
                     },
                     tabBarActiveTintColor: COLORS.primary,
-                    tabBarInactiveTintColor: COLORS.gray1,
+                    tabBarInactiveTintColor: COLORS.tabUnselectedGray,
                 })}>
                 <Tab.Screen
                     name={HOME_SCREEN.MOVIE_SCREEN}

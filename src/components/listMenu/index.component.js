@@ -40,7 +40,7 @@ const ListMenu = (props) => {
                     :
                     <TouchableOpacity
                         onPress={() => handleListClick(MOVIE_LISTS.MOVIES_IN_GRID)}>
-                        <Entypo size={iconSize} name={iconGrid} color={COLORS.gray1} />
+                        <Entypo size={iconSize} name={iconGrid} color={COLORS.tabUnselectedGray} />
                     </TouchableOpacity>
             }
             {
@@ -51,7 +51,7 @@ const ListMenu = (props) => {
                     :
                     <TouchableOpacity
                         onPress={() => handleListClick(MOVIE_LISTS.MOVIES_IN_LIST)}>
-                        <Entypo size={iconSizeList} name={iconList} color={COLORS.gray1} />
+                        <Entypo size={iconSizeList} name={iconList} color={COLORS.tabUnselectedGray} />
                     </TouchableOpacity>
             }
         </View>
