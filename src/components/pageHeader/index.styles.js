@@ -1,4 +1,4 @@
-import { 
+import {
     Dimensions
 } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
@@ -10,8 +10,8 @@ const entireScreenWidth = Dimensions.get('window').width;
 EStyleSheet.build({ $rem: entireScreenWidth / 380 });
 
 const style = EStyleSheet.create({
-    safeAreaView:{ 
-        backgroundColor: COLORS.primary 
+    safeAreaView: {
+        backgroundColor: COLORS.primary
     },
     header: {
         height: '60rem',
@@ -29,7 +29,7 @@ const style = EStyleSheet.create({
         color: COLORS.white,
         fontWeight: '500',
         textAlign: 'left',
-        marginLeft : '15rem',
+        marginLeft: '15rem',
         width: '200rem',
         lineHeight: '22rem',
     },
@@ -48,15 +48,15 @@ const style = EStyleSheet.create({
         fontSize: '20rem',
         marginLeft: '5rem'
     },
-    backIconContainer:{
-        justifyContent:'center'
+    backIconContainer: {
+        justifyContent: 'center'
     },
-    favIconContainer:{
+    favIconContainer: {
         textAlign: 'right',
     },
-    backIcon : {
-        width: '40rem', 
-        height: '40rem', 
+    backIcon: {
+        width: '40rem',
+        height: '40rem',
         resizeMode: 'contain',
     },
 });

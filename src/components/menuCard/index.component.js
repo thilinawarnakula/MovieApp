@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity,View} from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import styles from './index.styles';
 
 import { MOVIE_LISTS } from '../../utilities/constants';
@@ -12,7 +12,7 @@ const MenuCard = (props) => {
 
     const {
         key,
-        videoItem, 
+        videoItem,
         listType,
         navigation
     } = props;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Text, 
+    Text,
     View
 } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';

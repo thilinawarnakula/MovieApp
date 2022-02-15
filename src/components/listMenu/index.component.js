@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-     View,
-     TouchableOpacity
+    View,
+    TouchableOpacity
 } from 'react-native';
 
 import styles from './index.styles';

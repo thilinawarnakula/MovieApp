@@ -13,12 +13,12 @@ const style = EStyleSheet.create({
     cardGrid: {
         borderRadius: '15rem',
         marginEnd: 40,
-        width : 200
+        width: 200
     },
-    cardList:{
+    cardList: {
         height: cardHeight,
-        marginTop:'30rem',
-        marginBottom:'50rem',
+        marginTop: '30rem',
+        marginBottom: '50rem',
         borderRadius: '15rem',
     },
     image: {
@@ -33,8 +33,8 @@ const style = EStyleSheet.create({
     },
     title: {
         color: COLORS.black,
-        textAlign : 'center',
-        marginHorizontal:'5rem'
+        textAlign: 'center',
+        marginHorizontal: '5rem'
     },
 });
 

@@ -1,4 +1,4 @@
-import { 
+import {
     Dimensions
 } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
@@ -11,27 +11,27 @@ EStyleSheet.build({ $rem: entireScreenWidth / 380 });
 
 const style = EStyleSheet.create({
     container: {
-        backgroundColor : COLORS.transparent,
-        flex : 1,
+        backgroundColor: COLORS.transparent,
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
-    imagePic : {
-        width: '70rem', 
-        height: '70rem', 
+    imagePic: {
+        width: '70rem',
+        height: '70rem',
         resizeMode: 'contain',
     },
-    textTitleMain : {
-        fontSize: '18rem', 
+    textTitleMain: {
+        fontSize: '18rem',
         color: COLORS.black,
-        textAlign:'center',
-        marginTop : '08rem',
+        textAlign: 'center',
+        marginTop: '08rem',
     },
-    textTitleSub : {
-        fontSize: '14rem', 
+    textTitleSub: {
+        fontSize: '14rem',
         color: COLORS.black,
-        marginTop : '8rem',
-        textAlign:'center'
+        marginTop: '8rem',
+        textAlign: 'center'
     },
 });
 

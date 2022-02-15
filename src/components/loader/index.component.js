@@ -6,7 +6,7 @@ import { COLORS } from '../../utilities/colors';
 import styles from './index.styles';
 
 
-const Loader = ({}) => {
+const Loader = ({ }) => {
 
     return (
         <View style={styles.loadingView}>

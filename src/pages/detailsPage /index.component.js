@@ -5,7 +5,6 @@ import { connect, useDispatch } from 'react-redux';
 
 import styles from './index.styles';
 
-
 import PageHeader from '../../components/pageHeader/index.component';
 import CustomIcon from '../../components/customIcon/index.component';
 import CustomTextView from '../../components/customTextView/index.component';
@@ -16,7 +15,7 @@ import { NO_DESCRIPTION, WATCH_VIDEO } from '../../utilities/strings';
 import { OPEN_VIDEO } from '../../utilities/constants';
 import { insertToRatingList,updateRatingList } from '../../redux/actions/movieAction';
 
-const profileImageMode = 'contain'
+const profileImageMode = 'contain';
 
 const DetailsPage = (props) => {
 

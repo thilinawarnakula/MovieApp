@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-     View,
-     FlatList
+    View,
+    FlatList
 } from 'react-native';
 import { MOVIE_LISTS } from '../../utilities/constants';
 
@@ -25,7 +25,7 @@ const MainListView = (props) => {
         return (
             <MenuCard
                 key={item?.id}
-                videoItem={item}     
+                videoItem={item}
                 listType={listType}
                 navigation={navigation}
             />
@@ -45,8 +45,8 @@ const MainListView = (props) => {
 
     return (
         <View style={styles.mainContainer}>
-             <CustomTextView textValue={playListTitle || ''} textStyle={styles.playListNameText} />
-             {renderVideoListContainer()}
+            <CustomTextView textValue={playListTitle || ''} textStyle={styles.playListNameText} />
+            {renderVideoListContainer()}
         </View>
     );
 };

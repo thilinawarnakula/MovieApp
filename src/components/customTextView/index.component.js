@@ -11,8 +11,8 @@ const CustomTextView = (props) => {
     } = props;
 
     return (
-        <Text 
-            style={[textStyle,styles.textView]}
+        <Text
+            style={[textStyle, styles.textView]}
             numberOfLines={numberOfLines}>{textValue}
         </Text>
     );
