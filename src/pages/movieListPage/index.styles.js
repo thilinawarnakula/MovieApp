@@ -14,6 +14,7 @@ const style = EStyleSheet.create({
         marginBottom : '40rem',
     },
     loaderContainer:{
+        flex: 1,
         justifyContent:'center',
         alignItems:'center'
     },

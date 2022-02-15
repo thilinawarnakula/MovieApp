@@ -20,9 +20,10 @@ import CustomTextView from '../customTextView/index.component';
 const PageHeader = (props) => {
     const {
         isFavIcon,
+        showBackIcon,
         title,
-        onPress,
-        onPressFavIcon,
+        onPress={},
+        onPressFavIcon = {},
         style = {}
     } = props;
     return (
@@ -30,9 +31,12 @@ const PageHeader = (props) => {
         <StatusBar backgroundColor={COLORS.primary}/>
         {
             <View style={[style, styles.header]}>
-                <TouchableOpacity style={styles.backIconContainer} activeOpacity={0.6} onPress={onPress}>
+                {
+                    showBackIcon && 
+                    <TouchableOpacity style={styles.backIconContainer} activeOpacity={0.6} onPress={onPress}>
                     <Feather name={'arrow-left'} size={30} color={COLORS.white} />
                 </TouchableOpacity>
+                }
                 <CustomTextView
                     textValue={title}
                     numberOfLines={1}

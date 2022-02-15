@@ -14,17 +14,11 @@ const style = EStyleSheet.create({
         backgroundColor: COLORS.primary 
     },
     header: {
-        height: '56rem',
+        height: '60rem',
         backgroundColor: COLORS.primary,
         flexDirection: 'row',
         justifyContent: 'space-between',
         padding: '16rem',
-    },
-    menuIconContatiner: {
-        flex: 0.1,
-        marginTop: Platform.OS === 'ios' ? '-4rem' : '0rem',
-        justifyContent:'center',
-        alignItems:'center'
     },
     leftContainerFull: {
         flex: 0.9,
@@ -36,7 +30,8 @@ const style = EStyleSheet.create({
         fontWeight: '500',
         textAlign: 'left',
         marginLeft : '15rem',
-        width: '200rem'
+        width: '200rem',
+        lineHeight: '22rem',
     },
     icon: {
         fontSize: '20rem',

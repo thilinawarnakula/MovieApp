@@ -1,5 +1,5 @@
 export const CHANNEL_ID = 'UCkPlIeFLGT9dx-YDFPigvjQ';
-export const API_KEY = 'AIzaSyB5mUJfy20sj5ozvg_38GxSk_TI2dts_go';
+export const API_KEY = 'AIzaSyCKmeEHbJo__EHqoIE_rP5sP--rSffYa_g';
 
 export const PAGE_LIMIT = 10;
 export const INITIAL_PAGE_OFFSET = 0;

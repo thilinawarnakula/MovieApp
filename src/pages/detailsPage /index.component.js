@@ -126,7 +126,7 @@ const DetailsPage = (props) => {
     return (
         <SafeAreaView style={styles.mainContainer}>
             <ScrollView style={styles.scrollViewContainer}>
-            <PageHeader isFavIcon={true} title={videoItem?.snippet?.title} onPress={onPressBack} onPressFavIcon={handleFavIcon}/>
+            <PageHeader isFavIcon={true} showBackIcon={true} title={videoItem?.snippet?.title} onPress={onPressBack} onPressFavIcon={handleFavIcon}/>
             {renderBannerImage()}
             {renderProfileImage()}
             {renderVideoDetails()}
