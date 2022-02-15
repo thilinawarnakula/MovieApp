@@ -18,13 +18,19 @@ import CustomTextView from '../customTextView/index.component';
 
 const PageHeader = (props) => {
     const {
-        isFavIcon,
+        isFavouriteVideo,
+        showFavIcon,
         showBackIcon,
         title,
         onPress = {},
         onPressFavIcon = {},
         style = {}
     } = props;
+
+    const handleFavouriteClick = () => {
+        onPressFavIcon(!isFavouriteVideo);
+    };
+
     return (
         <SafeAreaView style={styles.safeAreaView}>
             <StatusBar backgroundColor={COLORS.primary} />
@@ -42,9 +48,9 @@ const PageHeader = (props) => {
                         textStyle={styles.title}>
                     </CustomTextView>
                     {
-                        isFavIcon &&
-                        <TouchableOpacity style={styles.favIconContainer} activeOpacity={0.6} onPress={onPressFavIcon}>
-                            {true ? <Entypo name={'heart'} size={30} color={COLORS.white} /> : <Entypo name={'heart-outlined'} size={30} color={COLORS.white} />}
+                        showFavIcon &&
+                        <TouchableOpacity style={styles.favIconContainer} activeOpacity={0.6} onPress={handleFavouriteClick}>
+                            {isFavouriteVideo ? <Entypo name={'heart'} size={30} color={COLORS.white} /> : <Entypo name={'heart-outlined'} size={30} color={COLORS.white} />}
                         </TouchableOpacity>
                     }
                 </View>

@@ -33,7 +33,6 @@ from '../../utilities/strings';
 import { MOVIE_LISTS } from '../../utilities/constants';
 
 import {
-    updateFavouriteMovieList,
     updateFilteredFavouriteMovieList
 } from '../../redux/actions/movieAction';
 
@@ -58,33 +57,16 @@ const FavouriteMovieListPage = (props) => {
     useEffect(() => {
         if (isFocused) {
             clearSearchText();
-            fetchData();
+            getData();
         }
     }, [isFocused]);
 
-    const fetchData = () => {
-        setLoadingValue(true);
-        getMovieData(
-            getMovieDataSuccess,
-            getMovieDataError,
-        );
-    };
-    
-    const getMovieDataSuccess = (movieList) => {
-        let playListItems = movieList.data.items;
-        dispatch(updateFavouriteMovieList(playListItems));
-        dispatch(updateFilteredFavouriteMovieList(playListItems));
-        setLoadingValue(false);
-    };
-
-    const getMovieDataError = () => {
-        dispatch(updateFavouriteMovieList([]));
-        dispatch(updateFilteredFavouriteMovieList([]));
-        setLoadingValue(false);
+    const getData = () => {
+        dispatch(updateFilteredFavouriteMovieList(favouriteMovieList));
     };
 
     const clearText = () => {
-        fetchData();
+        getData();
         clearSearchText();
     }
 
@@ -99,7 +81,7 @@ const FavouriteMovieListPage = (props) => {
             );
             func();
         } else {
-            fetchData();
+            getData();
             setLoadingValue(false);
         }
     };
@@ -122,10 +104,11 @@ const FavouriteMovieListPage = (props) => {
     );
 
     const renderItem = ({ item, index }) => {
+        let videoData = item?.videoItem;
         return (
             <MenuCard
-                key={item?.id}
-                videoItem={item}     
+                key={videoData?.id}
+                videoItem={videoData}     
                 listType={MOVIE_LISTS.MOVIES_IN_LIST}
                 navigation={navigation}
             />

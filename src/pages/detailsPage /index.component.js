@@ -13,7 +13,11 @@ import MovieRating from '../../components/movieRating/index.component';
 
 import { NO_DESCRIPTION, WATCH_VIDEO } from '../../utilities/strings';
 import { OPEN_VIDEO } from '../../utilities/constants';
-import { insertToRatingList,updateRatingList } from '../../redux/actions/movieAction';
+
+import {
+    handleStarRating,getRatingValue,
+    handleFavouriteStatus,getFavouriteStatus,
+} from '../../services/movieService';
 
 const profileImageMode = 'contain';
 
@@ -22,11 +26,13 @@ const DetailsPage = (props) => {
     const {
         navigation,
         route,
-        ratingMovieList
+        ratingMovieList,
+        favouriteMovieList
     } = props;
 
     const [videoItem, setVideoItem] = useState(null);
     const [videoRating, setVideoRating] = useState(0);
+    const [isFavouriteVideo, setFavouriteVideo] = useState(false);
     
     const isFocused = useIsFocused();
     const dispatch = useDispatch();
@@ -35,15 +41,26 @@ const DetailsPage = (props) => {
         if (isFocused) {
             setVideoItem(route?.params?.videoItem);
             setRatingValue();
+            setFavouriteStatus();
         }else{
             setVideoItem(null);
-            setVideoRating(0)
+            setVideoRating(0);
+            setFavouriteVideo(false);
         }
     }, [isFocused]);
 
+    const setFavouriteStatus = () => {
+        let videoId = route?.params?.videoItem?.snippet?.resourceId?.videoId; 
+        let resultVideo = getFavouriteStatus(favouriteMovieList,videoId);
+        if(resultVideo && resultVideo?.isFavourite){
+            setFavouriteVideo(resultVideo?.isFavourite)
+        }
+    };
+
+
     const setRatingValue = () => {
         let videoId = route?.params?.videoItem?.snippet?.resourceId?.videoId; 
-        let resultVideo = ratingMovieList.find(data => data.videoId === videoId);
+        let resultVideo = getRatingValue(ratingMovieList,videoId);
         if(resultVideo){
             setVideoRating(resultVideo?.videoRating)
         }
@@ -53,25 +70,13 @@ const DetailsPage = (props) => {
         navigation.goBack();
     };
 
-    const handleFavIcon = () => {
-       
+    const handleFavIcon = (favouriteStatus) => {
+        handleFavouriteStatus(videoItem,favouriteMovieList,favouriteStatus,dispatch);
+        setFavouriteVideo(favouriteStatus);
     };
 
     const updateRatingValue = (ratingValue) => {
-        let videoId = videoItem?.snippet?.resourceId?.videoId;
-        const indexToUpdate = ratingMovieList.findIndex(data => data.videoId === videoId);
-        if (indexToUpdate < 0 ) {
-            // insert to the rating movies
-            let newMovieRate = {}
-            newMovieRate.videoId = videoId;
-            newMovieRate.videoRating = ratingValue
-            dispatch(insertToRatingList(newMovieRate));
-        } else {
-             // updating the rating value
-             let newMovieList = [...ratingMovieList];
-             newMovieList[indexToUpdate].videoRating = ratingValue
-             dispatch(updateRatingList(newMovieList));
-        }
+        handleStarRating(videoItem,ratingMovieList,ratingValue,dispatch);
         setVideoRating(ratingValue);
     };
 
@@ -128,7 +133,13 @@ const DetailsPage = (props) => {
     return (
         <SafeAreaView style={styles.mainContainer}>
             <ScrollView style={styles.scrollViewContainer}>
-            <PageHeader isFavIcon={true} showBackIcon={true} title={videoItem?.snippet?.title} onPress={onPressBack} onPressFavIcon={handleFavIcon}/>
+            <PageHeader
+                isFavouriteVideo={isFavouriteVideo}
+                showFavIcon={true} 
+                showBackIcon={true} 
+                title={videoItem?.snippet?.title} 
+                onPress={onPressBack} 
+                onPressFavIcon={handleFavIcon}/>
             {renderBannerImage()}
             {renderProfileImage()}
             {renderVideoDetails()}
@@ -139,6 +150,7 @@ const DetailsPage = (props) => {
 
 const mapStateToProps = (state) => ({
     ratingMovieList: state.movies.ratingMovieList,
+    favouriteMovieList: state.movies.favouriteMovieList,
 });
 
 export default connect(mapStateToProps)(DetailsPage);

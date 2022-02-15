@@ -3,7 +3,9 @@ import {
     INSERT_TO_RATING_LIST,
     UPDATE_RATING_LIST,
     UPDATE_FAV_MOVIE_LIST,
-    UPDATE_FILTERED_FAV_MOVIE_LIST
+    UPDATE_FILTERED_FAV_MOVIE_LIST,
+    ADD_FAVOURITE_MOVIE,
+    REMOVE_FAVOURITE_MOVIE
 } from '../types';
 
 const INITIAL_STATE = {
@@ -39,6 +41,17 @@ export default (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 filltedFavouriteMovieList: action.payload,
+            };
+        case ADD_FAVOURITE_MOVIE:
+            const newFavouriteMovie = action.payload;
+            return {
+                ...state,
+                favouriteMovieList: [...state.ratingMovieList, newFavouriteMovie]
+            }
+        case REMOVE_FAVOURITE_MOVIE:
+            return {
+                ...state,
+                favouriteMovieList: action.payload,
             };
         default:
             return state;
