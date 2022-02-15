@@ -13,7 +13,7 @@ const style = EStyleSheet.create({
     cardGrid: {
         borderRadius: '10rem',
         marginEnd: 20,
-        width: 200,
+        width: 250,
     },
     cardList: {
         height: 'auto',
