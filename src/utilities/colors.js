@@ -9,6 +9,8 @@ export const COLORS = {
     transparent: 'transparent',
     textGray:'#6e6e70',
     backgroundGray:'#efeff4',
+    headerGray:'#D3D3D3',
+    headerWhite:'#f5f5f6',
     textInputGray:'#ececf2',
     gray1:'#575761',
     gray2:'#EAEAEA',

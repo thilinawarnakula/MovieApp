@@ -13,6 +13,7 @@ import {
 import styles from './index.styles';
 import Feather from 'react-native-vector-icons/Feather';
 import Entypo from 'react-native-vector-icons/Entypo';
+import LinearGradient from 'react-native-linear-gradient';
 
 import CustomTextView from '../customTextView/index.component';
 
@@ -35,7 +36,7 @@ const PageHeader = (props) => {
         <SafeAreaView style={styles.safeAreaView}>
             <StatusBar backgroundColor={COLORS.primary} />
             {
-                <View style={[style, styles.header]}>
+                <LinearGradient colors={[COLORS.white,COLORS.headerGray]}style={[style, styles.header]}>
                     {
                         showBackIcon &&
                         <TouchableOpacity style={styles.backIconContainer} activeOpacity={0.6} onPress={onPress}>
@@ -53,7 +54,7 @@ const PageHeader = (props) => {
                             {isFavouriteVideo ? <Entypo name={'heart'} size={30} color={COLORS.primary} /> : <Entypo name={'heart-outlined'} size={30} color={COLORS.primary} />}
                         </TouchableOpacity>
                     }
-                </View>
+                </LinearGradient>
             }
         </SafeAreaView>
 
