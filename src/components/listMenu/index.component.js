@@ -12,8 +12,8 @@ import { COLORS } from '../../utilities/colors';
 
 import Entypo from 'react-native-vector-icons/Entypo';
 
-const iconSize = 40;
-const iconSizeList = 40;
+const iconSize = 35;
+const iconSizeList = 35;
 
 const iconGrid = 'grid';
 const iconList = 'list';
