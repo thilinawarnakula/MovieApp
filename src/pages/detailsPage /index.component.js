@@ -14,7 +14,7 @@ import MovieRating from '../../components/movieRating/index.component';
 
 import { NO_DESCRIPTION, WATCH_VIDEO } from '../../utilities/strings';
 import { OPEN_VIDEO } from '../../utilities/constants';
-import { insertToRatingList } from '../../redux/actions/movieAction';
+import { insertToRatingList,updateRatingList } from '../../redux/actions/movieAction';
 
 const DetailsPage = (props) => {
 
@@ -41,7 +41,7 @@ const DetailsPage = (props) => {
     }, [isFocused]);
 
     const setRatingValue = () => {
-        let videoId = videoItem?.snippet?.resourceId?.videoId; 
+        let videoId = route?.params?.videoItem?.snippet?.resourceId?.videoId; 
         let resultVideo = ratingMovieList.find(data => data.videoId === videoId);
         if(resultVideo){
             setVideoRating(resultVideo?.videoRating)
@@ -57,18 +57,21 @@ const DetailsPage = (props) => {
     };
 
     const updateRatingValue = (ratingValue) => {
-        console.log("Rating is: " + ratingValue);
         let videoId = videoItem?.snippet?.resourceId?.videoId;
-        let resultVideo = ratingMovieList.find(data => data.videoId === videoId);
-        if (!resultVideo) {
-            let newRate = {}
+        const indexToUpdate = ratingMovieList.findIndex(data => data.videoId === videoId);
+        if (indexToUpdate < 0 ) {
+            // insert to the rating movies
+            let newMovieRate = {}
             newMovieRate.videoId = videoId;
             newMovieRate.videoRating = ratingValue
             dispatch(insertToRatingList(newMovieRate));
-            setVideoRating(ratingValue);
         } else {
-
+             // updating the rating value
+             let newMovieList = [...ratingMovieList];
+             newMovieList[indexToUpdate].videoRating = ratingValue
+             dispatch(updateRatingList(newMovieList));
         }
+        setVideoRating(ratingValue);
     };
 
     const handleWatchVideo = () => {
