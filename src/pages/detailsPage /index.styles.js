@@ -10,7 +10,7 @@ EStyleSheet.build({ $rem: entireScreenWidth / 380 });
 import { getResponsiveWidth } from '../../utilities/dimensions';
 
 const PROFILE_IMAGE_WIDTH = getResponsiveWidth(30);
-const PROFILE_IMAGE_HEIGHT = getResponsiveWidth(40);
+
 
 const styles = EStyleSheet.create({
   mainContainer:{
@@ -28,16 +28,16 @@ const styles = EStyleSheet.create({
     color:COLORS.red,
     marginLeft:'10rem',
     marginTop:'5rem',
-    fontSize : '16rem',
+    fontSize : '14rem',
     textDecorationLine: 'underline'
   },
   profileImage:{
-    height:PROFILE_IMAGE_HEIGHT,
+    flex:1,
     width: PROFILE_IMAGE_WIDTH,
     marginLeft: '40rem',
     marginTop: - 60,
     borderRadius: 0,
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.transparent,
     shadowColor: COLORS.black,
     shadowOffset: {
       width: 0,
@@ -81,6 +81,9 @@ const styles = EStyleSheet.create({
     marginBottom : 10,
     justifyContent:'center',
     alignItems:'center'
+  },
+  ratingContainer:{
+    paddingHorizontal : '12rem'
   },
 });
 

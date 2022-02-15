@@ -16,6 +16,8 @@ import { NO_DESCRIPTION, WATCH_VIDEO } from '../../utilities/strings';
 import { OPEN_VIDEO } from '../../utilities/constants';
 import { insertToRatingList,updateRatingList } from '../../redux/actions/movieAction';
 
+const profileImageMode = 'contain'
+
 const DetailsPage = (props) => {
 
     const {
@@ -101,8 +103,9 @@ const DetailsPage = (props) => {
             <CustomIcon
                 iconName={{ uri: videoItem?.snippet.thumbnails?.medium?.url }}
                 containerStyle={styles.profileImage}
+                resizeMode={profileImageMode}
             />
-            <View>
+            <View style={styles.ratingContainer}>
                 <TouchableOpacity onPress={handleWatchVideo}>
                     <CustomTextView
                         textValue={WATCH_VIDEO}
