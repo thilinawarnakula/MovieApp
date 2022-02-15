@@ -12,7 +12,7 @@ const style = EStyleSheet.create({
         flex: 1,
         marginTop : '10rem',
         marginBottom : '40rem',
-        backgroundColor:COLORS.backgroundGray
+        backgroundColor:COLORS.backgroundGray,
     },
     loaderContainer:{
         flex: 1,

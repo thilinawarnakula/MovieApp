@@ -6,9 +6,10 @@ import {
     TouchableOpacity, 
     View
 } from 'react-native';
-import {
-    CLEAR_ICON
-} from '../../utilities/icons';
+import { COLORS } from '../../utilities/colors';
+import LinearGradient from 'react-native-linear-gradient';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
 import styles from './index.styles';
 
 const CustomInput = (props) => {
@@ -17,32 +18,33 @@ const CustomInput = (props) => {
         onChangeText,
         searchText,
         clearText,
-        textInputName,
-        placeholderName
     } = props;
 
     return (
-        <View style={styles.mainView}>
-            <Text style={styles.textInputHeaderView}>{textInputName}</Text>
+        <LinearGradient colors={[COLORS.white,COLORS.textInputGray]} style={styles.mainView}>
             <View style={styles.textInputView}>
+                {
+                    searchText == '' &&
+                    <View
+                        style={styles.textClearContainer}>
+                        <AntDesign name={'search1'} size={25} color={COLORS.textGray}/>
+                    </View>
+                }
                 <TextInput
                     style={styles.input}
                     value={searchText}
-                    onChangeText={onChangeText}
-                    placeholder={placeholderName}>
+                    onChangeText={onChangeText}>
                 </TextInput>
                 {
                     searchText !== '' &&
                     <TouchableOpacity
                         onPress={clearText}
                         style={styles.textClearContainer}>
-                        <Image
-                            source={CLEAR_ICON}
-                            style={styles.imagePic} />
+                        <AntDesign name={'close'} size={25} color={COLORS.textGray}/>
                     </TouchableOpacity>
                 }
             </View>
-        </View>
+        </LinearGradient>
     );
 };
 

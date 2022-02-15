@@ -46,7 +46,7 @@ export default (state = INITIAL_STATE, action) => {
             const newFavouriteMovie = action.payload;
             return {
                 ...state,
-                favouriteMovieList: [...state.ratingMovieList, newFavouriteMovie]
+                favouriteMovieList: [...state.favouriteMovieList, newFavouriteMovie]
             }
         case REMOVE_FAVOURITE_MOVIE:
             return {

@@ -15,7 +15,7 @@ const PROFILE_IMAGE_WIDTH = getResponsiveWidth(30);
 const styles = EStyleSheet.create({
   mainContainer:{
     flex: 1,
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.backgroundGray,
   },
   bannerImage:{
     height : '250rem',

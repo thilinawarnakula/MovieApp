@@ -9,9 +9,6 @@ import { useIsFocused } from '@react-navigation/native';
 import { debounce } from 'lodash';
 import { memoize } from 'lodash/fp';
 
-import {
-    getMovieData
-} from './index.controller';
 import styles from './index.styles';
 
 import useSearchInputHook from '../../customHooks/useSearchInputHook';
@@ -23,8 +20,7 @@ import MenuCard from '../../components/menuCard/index.component';
 import NoResults from '../../components/noResults/index.component';
 import Loader from '../../components/loader/index.component';
 
-import { SEARCH_TEXT_INPUT_HEADER, 
-    SEARCH_TEXT_PlACE_HOLDER_INPUT_NAME,
+import {
     SCREEN_HEADER_NAME,
     NO_RESULT_HEADER,
     NO_RESULT_SUB_HEADER
@@ -97,9 +93,7 @@ const FavouriteMovieListPage = (props) => {
             <CustomInput
                 searchText={searchText}
                 onChangeText={onTextChange}
-                clearText={clearText}
-                textInputName={SEARCH_TEXT_INPUT_HEADER}
-                placeholderName={SEARCH_TEXT_PlACE_HOLDER_INPUT_NAME} />
+                clearText={clearText} />
         </View>
     );
 
@@ -143,11 +137,6 @@ const FavouriteMovieListPage = (props) => {
             <PageHeader isFavIcon={false} showBackIcon={false} title={SCREEN_HEADER_NAME}  />
             {renderSearchBarContainer()}
             {!isLoading && filltedFavouriteMovieList.length != 0 &&  renderFavouriteMovieList()}
-            <View style={styles.loadingContainer}>
-                {isLoading &&
-                    renderFullLoadingIndicator()
-                }
-            </View>
             {!isLoading && filltedFavouriteMovieList.length == 0 &&
                 renderNoResultList()
             }
