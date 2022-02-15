@@ -11,7 +11,8 @@ const style = EStyleSheet.create({
         flexDirection: "row",
         justifyContent: "flex-end",
         alignItems: 'center',
-        marginTop: '20rem'
+        marginTop: '20rem',
+        marginRight:'10rem'
     },
 });
 

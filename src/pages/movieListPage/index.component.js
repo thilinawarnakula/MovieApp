@@ -16,12 +16,14 @@ import {
     MOVIE_LISTS
 } from '../../utilities/constants';
 import styles from './index.styles';
+import { SCREEN_HEADER_NAME } from '../../utilities/strings';
 import {
     getMovieData
 } from './index.controller';
 
 import ListMenu from '../../components/listMenu/index.component';
 import Loader from '../../components/loader/index.component';
+import PageHeader from '../../components/pageHeader/index.component';
 
 const MovieListPage = (props) => {
 
@@ -108,8 +110,13 @@ const MovieListPage = (props) => {
         </View>
     ) : null);
 
+    const renderPageHeader = () => (
+        <PageHeader isFavIcon={false} showBackIcon={false} title={SCREEN_HEADER_NAME}  />
+    );
+
     return (
         <SafeAreaView style={!isLoading ? styles.mainContainer : [styles.mainContainer,styles.loaderContainer]}>
+            {!isLoading && renderPageHeader()}
             {!isLoading && renderMovieListSelection()}
             {!isLoading && renderFlatListContainer()}
             {renderFullLoadingIndicator()}

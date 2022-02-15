@@ -25,7 +25,7 @@ import Loader from '../../components/loader/index.component';
 
 import { SEARCH_TEXT_INPUT_HEADER, 
     SEARCH_TEXT_PlACE_HOLDER_INPUT_NAME,
-    FAV_SCREEN_HEADER,
+    SCREEN_HEADER_NAME,
     NO_RESULT_HEADER,
     NO_RESULT_SUB_HEADER
 } 
@@ -140,7 +140,7 @@ const FavouriteMovieListPage = (props) => {
 
     return (
         <SafeAreaView style={styles.mainContainer}>
-            <PageHeader isFavIcon={false} showBackIcon={false} title={FAV_SCREEN_HEADER}  />
+            <PageHeader isFavIcon={false} showBackIcon={false} title={SCREEN_HEADER_NAME}  />
             {renderSearchBarContainer()}
             {!isLoading && filltedFavouriteMovieList.length != 0 &&  renderFavouriteMovieList()}
             <View style={styles.loadingContainer}>

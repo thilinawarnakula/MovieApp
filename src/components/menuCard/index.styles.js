@@ -7,34 +7,34 @@ import { COLORS } from '../../utilities/colors';
 const entireScreenWidth = Dimensions.get('window').width;
 EStyleSheet.build({ $rem: entireScreenWidth / 380 });
 
-const cardHeight = 150;
+const cardHeight = 160;
 
 const style = EStyleSheet.create({
     cardGrid: {
-        borderRadius: '15rem',
-        marginEnd: 40,
-        width: 200
+        borderRadius: '10rem',
+        marginEnd: 20,
+        width: 200,
     },
     cardList: {
-        height: cardHeight,
-        marginTop: '30rem',
-        marginBottom: '50rem',
-        borderRadius: '15rem',
+        height: 'auto',
+        borderRadius: '10rem',
+        marginBottom:'8rem'
     },
     image: {
         width: '100%',
-        height: cardHeight - 20,
-        borderRadius: '15rem',
+        height: cardHeight ,
+        borderRadius: '10rem',
         alignItems: 'center'
     },
     detailsContainer: {
-        marginTop: '15rem',
+        padding: '10rem',
         alignItems: 'center',
     },
     title: {
-        color: COLORS.black,
+        color: COLORS.textGray,
         textAlign: 'center',
-        marginHorizontal: '5rem'
+        marginHorizontal: '5rem',
+        fontSize: '16rem',
     },
 });
 

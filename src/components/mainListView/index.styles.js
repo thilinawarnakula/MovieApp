@@ -9,16 +9,15 @@ EStyleSheet.build({ $rem: entireScreenWidth / 380 });
 
 const style = EStyleSheet.create({
     mainContainer: {
-        marginVertical: '15rem',
+    
     },
     playListNameText: {
-        color: COLORS.gray1,
+        color: COLORS.textGray,
         fontSize: '18rem',
-        fontWeight: '700',
         textAlign: 'left',
         flex: 1,
         marginLeft: '3rem',
-        marginTop: '10rem'
+        marginVertical: '10rem',
     }
 });
 

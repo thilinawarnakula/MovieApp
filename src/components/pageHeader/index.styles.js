@@ -11,11 +11,11 @@ EStyleSheet.build({ $rem: entireScreenWidth / 380 });
 
 const style = EStyleSheet.create({
     safeAreaView: {
-        backgroundColor: COLORS.primary
+        backgroundColor: COLORS.headerWhite
     },
     header: {
         height: '60rem',
-        backgroundColor: COLORS.primary,
+        backgroundColor: COLORS.headerWhite,
         flexDirection: 'row',
         justifyContent: 'space-between',
         padding: '16rem',
@@ -26,7 +26,7 @@ const style = EStyleSheet.create({
     },
     title: {
         fontSize: '18rem',
-        color: COLORS.white,
+        color: COLORS.black,
         fontWeight: '500',
         textAlign: 'left',
         marginLeft: '15rem',
@@ -40,7 +40,7 @@ const style = EStyleSheet.create({
     },
     iconBack: {
         fontSize: '32rem',
-        color: COLORS.white,
+        color: COLORS.black,
         fontWeight: '800',
     },
     appName: {
