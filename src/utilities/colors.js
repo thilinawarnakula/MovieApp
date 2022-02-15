@@ -17,5 +17,6 @@ export const COLORS = {
     gray3:'#333',
     red:'#EA5C2B',
     green:'#95CD41',
-    red:'#FF0000'
+    red:'#FF0000',
+    starRed:'#cc002e'
 };

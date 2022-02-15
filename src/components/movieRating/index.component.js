@@ -1,5 +1,4 @@
 import React from 'react';
-import { Rating } from 'react-native-ratings';
 import { COLORS } from '../../utilities/colors';
 import StarRating from 'react-native-star-rating';
 import styles from './index.styles';
@@ -23,7 +22,7 @@ const MovieRating = (props) => {
             maxStars={RATING_COUNT}
             rating={ratingValue}
             selectedStar={(rating) => onFinishRating(rating)}
-            fullStarColor={COLORS.primary}
+            fullStarColor={COLORS.starRed}
             starSize={30}
             buttonStyle={styles.starContainer}
         />

@@ -19,10 +19,11 @@ const styles = EStyleSheet.create({
   },
   bannerImage:{
     height : '250rem',
-    opacity: .9
+    opacity: .9,
+    marginTop: -20
   },
   metaDataContainer:{
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   watchVideoTitle:{
     color:COLORS.red,
@@ -34,8 +35,8 @@ const styles = EStyleSheet.create({
   profileImage:{
     flex:1,
     width: PROFILE_IMAGE_WIDTH,
-    marginLeft: '40rem',
-    marginTop: - 60,
+    marginLeft: '30rem',
+    marginTop: - 80,
     borderRadius: 0,
     backgroundColor: COLORS.transparent,
     shadowColor: COLORS.black,
@@ -45,7 +46,7 @@ const styles = EStyleSheet.create({
     },
     shadowRadius: 30,
     elevation: 10,
-    borderRadius: 8
+    borderRadius: '8rem',
   },
   videoNameText: {
     color: COLORS.white,
@@ -53,15 +54,13 @@ const styles = EStyleSheet.create({
     width: entireScreenWidth / 2 - 10,
     position: 'absolute',
     right: 0,
-    bottom: 0,
+    bottom: 15,
     fontSize: '14rem',
     textShadowOffset: {
       width: 2, height: 2
     },
     textShadowRadius: 10,
     textShadowColor: COLORS.gray3,
-
-    marginTop: 2,
     fontWeight: "bold",
     color: COLORS.white
   },
@@ -76,15 +75,20 @@ const styles = EStyleSheet.create({
     marginTop : 20,
     marginHorizontal:15,
     borderRadius: 30,
-    backgroundColor: COLORS.gray2,  
     padding : 8,
     marginBottom : 10,
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
   },
   ratingContainer:{
-    paddingHorizontal : '12rem'
+    paddingHorizontal : '12rem',
+    marginTop: - 18,
   },
+  title:{
+    fontSize: '14rem',
+    textAlign:'left',
+    color:COLORS.textGray
+  }
 });
 
 export default styles;

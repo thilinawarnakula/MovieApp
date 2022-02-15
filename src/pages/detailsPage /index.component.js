@@ -19,7 +19,7 @@ import {
     handleFavouriteStatus,getFavouriteStatus,
 } from '../../services/movieService';
 
-const profileImageMode = 'contain';
+const imageMode = 'contain';
 
 const DetailsPage = (props) => {
 
@@ -95,6 +95,7 @@ const DetailsPage = (props) => {
             <CustomIcon
                 iconName={{uri: videoItem?.snippet.thumbnails?.medium?.url}} 
                 containerStyle={styles.bannerImage}
+                resizeMode={imageMode}
             />
             <CustomTextView 
                 textValue={videoItem?.snippet?.title || ''} 
@@ -107,7 +108,7 @@ const DetailsPage = (props) => {
             <CustomIcon
                 iconName={{ uri: videoItem?.snippet.thumbnails?.medium?.url }}
                 containerStyle={styles.profileImage}
-                resizeMode={profileImageMode}
+                resizeMode={imageMode}
             />
             <View style={styles.ratingContainer}>
                 <TouchableOpacity onPress={handleWatchVideo}>
@@ -132,7 +133,7 @@ const DetailsPage = (props) => {
 
     return (
         <SafeAreaView style={styles.mainContainer}>
-            <ScrollView style={styles.scrollViewContainer}>
+            <ScrollView style={styles.scrollViewContainer} showsVerticalScrollIndicator={false}>
             <PageHeader
                 isFavouriteVideo={isFavouriteVideo}
                 showFavIcon={true} 
