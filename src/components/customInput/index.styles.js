@@ -38,6 +38,10 @@ const style = EStyleSheet.create({
         flex:1,
         marginHorizontal : '10rem'
     },
+    textSearchContainer:{
+        flex:1,
+        marginHorizontal : '5rem'
+    },
 });
 
 export default style;

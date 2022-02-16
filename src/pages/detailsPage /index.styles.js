@@ -35,7 +35,7 @@ const styles = EStyleSheet.create({
   profileImage:{
     flex:1,
     width: PROFILE_IMAGE_WIDTH,
-    marginLeft: '30rem',
+    marginLeft: '15rem',
     marginTop: - 80,
     backgroundColor: COLORS.transparent,
     borderRadius: '8rem',
@@ -70,7 +70,7 @@ const styles = EStyleSheet.create({
   },
   videoDetails: {
     marginTop : 20,
-    marginHorizontal:15,
+    marginHorizontal: 10,
     borderRadius: 30,
     padding : 8,
     marginBottom : 10,

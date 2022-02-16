@@ -23,7 +23,7 @@ const MovieRating = (props) => {
             rating={ratingValue}
             selectedStar={(rating) => onFinishRating(rating)}
             fullStarColor={COLORS.starRed}
-            starSize={30}
+            starSize={25}
             buttonStyle={styles.starContainer}
         />
     );

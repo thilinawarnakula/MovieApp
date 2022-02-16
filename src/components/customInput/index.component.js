@@ -26,8 +26,8 @@ const CustomInput = (props) => {
                 {
                     searchText == '' &&
                     <View
-                        style={styles.textClearContainer}>
-                        <AntDesign name={'search1'} size={25} color={COLORS.textGray}/>
+                        style={styles.textSearchContainer}>
+                        <AntDesign name={'search1'} size={20} color={COLORS.textGray}/>
                     </View>
                 }
                 <TextInput
@@ -40,7 +40,7 @@ const CustomInput = (props) => {
                     <TouchableOpacity
                         onPress={clearText}
                         style={styles.textClearContainer}>
-                        <AntDesign name={'close'} size={25} color={COLORS.textGray}/>
+                        <AntDesign name={'close'} size={20} color={COLORS.textGray}/>
                     </TouchableOpacity>
                 }
             </View>

@@ -11,7 +11,7 @@ const cardHeight = 160;
 
 const style = EStyleSheet.create({
     cardGrid: {
-        borderRadius: '10rem',
+        borderRadius: '6rem',
         marginEnd: 20,
         width: 250,
         shadowColor: COLORS.black,
@@ -21,7 +21,7 @@ const style = EStyleSheet.create({
     },
     cardList: {
         height: 'auto',
-        borderRadius: '10rem',
+        borderRadius: '6rem',
         marginBottom:'8rem',
         shadowColor: COLORS.black,
         shadowOffset: {width: 2, height: 3},
@@ -31,7 +31,7 @@ const style = EStyleSheet.create({
     image: {
         width: '100%',
         height: cardHeight ,
-        borderRadius: '10rem',
+        borderRadius: '6rem',
         alignItems: 'center'
     },
     detailsContainer: {
