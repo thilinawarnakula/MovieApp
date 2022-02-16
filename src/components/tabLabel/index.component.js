@@ -13,7 +13,7 @@ const TabLabel = (props) => {
     } = props;
 
     return (
-        <TouchableOpacity style={styles.labelText}>
+        <TouchableOpacity>
             <CustomTextView textValue={route.title} textStyle={focused ? styles.focusTitle : styles.inFocusTitle}/>
         </TouchableOpacity>
     );

@@ -26,9 +26,6 @@ const styles = EStyleSheet.create({
     paddingHorizontal: '30rem',
     marginTop: '5rem'
   },
-  listViewContainer: {
-    padding: '20rem',
-  },
   loadingView: {
     width: '60rem',
     height: '22rem',

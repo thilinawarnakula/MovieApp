@@ -34,7 +34,6 @@ const MovieListPage = (props) => {
         <FlatList
             data={movieList}
             renderItem={renderItem}
-            style={styles.listView}
             showsVerticalScrollIndicator={false}
             showsHorizontalScrollIndicator={false}
             keyExtractor={(item) => item.uuid}

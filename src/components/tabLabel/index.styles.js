@@ -8,12 +8,6 @@ const entireScreenWidth = Dimensions.get('window').width;
 EStyleSheet.build({ $rem: entireScreenWidth / 380 });
 
 const style = EStyleSheet.create({
-    loadingView: {
-        width: '120rem',
-        height: '35rem',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
     focusTitle:{
         fontSize: '16rem',
         color: COLORS.black,
