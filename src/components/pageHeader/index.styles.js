@@ -18,7 +18,8 @@ const style = EStyleSheet.create({
         backgroundColor: COLORS.headerWhite,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        padding: '12rem',
     },
     title: {
         fontSize: '18rem',
