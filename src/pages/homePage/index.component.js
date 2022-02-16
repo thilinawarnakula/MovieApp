@@ -24,7 +24,8 @@ const initialLayout = {width: Dimensions.get('window').width};
 const HomePage = (props) => {
 
     const {
-        movieList
+        movieList,
+        navigation
     } = props;
 
     const [isLoading,setLoadingValue] = useLoaderHook(false);
@@ -59,24 +60,19 @@ const HomePage = (props) => {
         setLoadingValue(false);
     };
 
+    const renderMovieList = () => (
+        <MovieListPage
+        mainTabIndex={index}
+        movieList={movieList}
+        navigation={navigation}
+    />
+     );
+
     const renderScene = ({ route }) => {
         switch (route.key) {
             case MAIN_TAB_NAMES.GRID:
-                return (
-                    <MovieListPage
-                        mainTabIndex={index}
-                        movieList={movieList}
-                        navigation={navigator}
-                    />
-                );
             case MAIN_TAB_NAMES.LIST:
-                return (
-                    <MovieListPage
-                        mainTabIndex={index}
-                        movieList={movieList}
-                        navigation={navigator}
-                    />
-                );
+                return renderMovieList()
             default:
                 return null;
         }
