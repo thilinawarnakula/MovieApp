@@ -14,11 +14,19 @@ const style = EStyleSheet.create({
         borderRadius: '10rem',
         marginEnd: 20,
         width: 250,
+        shadowColor: COLORS.black,
+        shadowOffset: {width: 2, height: 3},
+        shadowOpacity: 0.2,
+        shadowRadius:2.62,
     },
     cardList: {
         height: 'auto',
         borderRadius: '10rem',
-        marginBottom:'8rem'
+        marginBottom:'8rem',
+        shadowColor: COLORS.black,
+        shadowOffset: {width: 2, height: 3},
+        shadowOpacity: 0.2,
+        shadowRadius:2.62,
     },
     image: {
         width: '100%',

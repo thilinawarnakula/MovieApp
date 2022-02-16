@@ -39,11 +39,9 @@ const MovieListPage = (props) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if (isFocused) {
-            setListType(MOVIE_LISTS.MOVIES_IN_GRID);
-            loadData();
-        }
-    }, [isFocused]);
+        setListType(MOVIE_LISTS.MOVIES_IN_GRID);
+        loadData();
+    }, []);
 
     const loadData = () => {
         setLoadingValue(true);
