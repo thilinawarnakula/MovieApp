@@ -9,7 +9,6 @@ EStyleSheet.build({ $rem: entireScreenWidth / 380 });
 
 const style = EStyleSheet.create({
     mainContainer: {
-    
     },
     playListNameText: {
         color: COLORS.textGray,

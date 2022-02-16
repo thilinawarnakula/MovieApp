@@ -20,10 +20,6 @@ const style = EStyleSheet.create({
         justifyContent: 'space-between',
         padding: '16rem',
     },
-    leftContainerFull: {
-        flex: 0.9,
-        alignItems: 'flex-start'
-    },
     title: {
         fontSize: '18rem',
         color: COLORS.black,
@@ -32,21 +28,6 @@ const style = EStyleSheet.create({
         marginLeft: '15rem',
         width: '200rem',
         lineHeight: '22rem',
-    },
-    icon: {
-        fontSize: '20rem',
-        color: COLORS.white,
-        fontWeight: '800',
-    },
-    iconBack: {
-        fontSize: '32rem',
-        color: COLORS.black,
-        fontWeight: '800',
-    },
-    appName: {
-        color: COLORS.white,
-        fontSize: '20rem',
-        marginLeft: '5rem'
     },
     backIconContainer: {
         justifyContent: 'center'

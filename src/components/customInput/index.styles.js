@@ -38,15 +38,6 @@ const style = EStyleSheet.create({
         flex:1,
         marginHorizontal : '10rem'
     },
-    imagePic : {
-        width: '20rem', 
-        height: '20rem', 
-        resizeMode: 'contain',
-    },
-    textInputHeaderView:{
-        color : COLORS.black,
-        fontSize : '12rem'
-    }
 });
 
 export default style;

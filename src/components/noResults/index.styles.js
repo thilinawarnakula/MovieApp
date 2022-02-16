@@ -16,11 +16,6 @@ const style = EStyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    imagePic: {
-        width: '70rem',
-        height: '70rem',
-        resizeMode: 'contain',
-    },
     textTitleMain: {
         fontSize: '18rem',
         color: COLORS.black,

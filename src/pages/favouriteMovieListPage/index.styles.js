@@ -16,25 +16,6 @@ const style = EStyleSheet.create({
         alignItems:'center',
         marginTop : '20rem'
     },
-    listViewContainer:{
-        padding: '20rem',
-    },
-    loaderContainer:{
-        flex: 1,
-        justifyContent:'center',
-        alignItems:'center'
-    },
-    loadingContainer:{
-        justifyContent: 'center',
-        alignItems: 'center', 
-        marginTop : '50rem'
-    },
-    loadingView :{
-        width : '60rem',
-        height : '22rem',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
 });
 
 export default style;

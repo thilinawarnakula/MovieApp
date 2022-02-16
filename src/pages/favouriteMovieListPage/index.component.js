@@ -120,12 +120,6 @@ const FavouriteMovieListPage = (props) => {
         />
     );
 
-    const renderFullLoadingIndicator = () => ((isLoading) ? (
-        <View style={styles.loadingView}>
-            <Loader />
-        </View>
-    ) : null);
-
     const renderNoResultList = () => (
         <NoResults
             headerText={NO_RESULT_HEADER}
