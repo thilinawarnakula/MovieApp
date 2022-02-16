@@ -37,16 +37,13 @@ const styles = EStyleSheet.create({
     width: PROFILE_IMAGE_WIDTH,
     marginLeft: '30rem',
     marginTop: - 80,
-    borderRadius: 0,
     backgroundColor: COLORS.transparent,
-    shadowColor: COLORS.black,
-    shadowOffset: {
-      width: 0,
-      height: 20
-    },
-    shadowRadius: 30,
-    elevation: 10,
     borderRadius: '8rem',
+    shadowColor: COLORS.black,
+    shadowOffset: {width: 2, height: 3},
+    shadowOpacity: 0.2,
+    shadowRadius:2.62,
+    elevation: 10,
   },
   videoNameText: {
     color: COLORS.white,
