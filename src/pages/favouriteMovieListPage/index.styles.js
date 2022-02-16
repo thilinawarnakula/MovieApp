@@ -16,6 +16,9 @@ const style = EStyleSheet.create({
         alignItems:'center',
         marginTop : '20rem'
     },
+    listViewContainer:{
+        padding: '20rem',
+    },
 });
 
 export default style;
