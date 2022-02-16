@@ -10,8 +10,6 @@ EStyleSheet.build({ $rem: entireScreenWidth / 380 });
 const style = EStyleSheet.create({
     mainContainer: {
         flex: 1,
-        marginTop : '10rem',
-        marginBottom : '40rem',
         backgroundColor:COLORS.backgroundGray,
     },
     loaderContainer:{

@@ -3,7 +3,6 @@ import React from 'react';
 import { HOME_SCREEN } from './NavigationConstants';
 
 import FavouriteMovieListPage from '../pages/favouriteMovieListPage/index.component';
-import DetailsPage from '../pages/detailsPage /index.component';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,13 +14,6 @@ export default function MyStack() {
       <Stack.Screen
         name={HOME_SCREEN.FAVOURITE_MOVIE_SCREEN}
         component={FavouriteMovieListPage}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name={HOME_SCREEN.DETAILS_PAGE}
-        component={DetailsPage}
         options={{
           headerShown: false,
         }}

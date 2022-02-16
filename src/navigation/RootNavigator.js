@@ -1,52 +1,35 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MovieNavigator from './MovieNavigator';
-import FavouriteMovieNavigator from './FavouriteMovieNavigator';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import DetailsPage from '../pages/detailsPage /index.component';
+import TabNavigator from './TabNavigator';
+
 import { HOME_SCREEN } from './NavigationConstants';
-import {
-    COLORS
-} from '../utilities/colors';
 
-import AntDesign from 'react-native-vector-icons/AntDesign';
-
-const Tab = createBottomTabNavigator();
-
+const Stack = createNativeStackNavigator();
 
 const RootNavigator = () => {
 
     return (
         <NavigationContainer>
-            <Tab.Navigator initialRouteName={HOME_SCREEN.MOVIE_SCREEN}
-                screenOptions={({ route }) => ({
-                    tabBarIcon: ({ focused, color, size }) => {
-                        let iconName;
-
-                        if (route.name === HOME_SCREEN.MOVIE_SCREEN) {
-                            iconName = 'youtube';
-                        } else if (route.name === HOME_SCREEN.FAVOURITE_MOVIE_SCREEN) {
-                            iconName = 'heart';
-                        }
-                        return <AntDesign name={iconName} size={size} color={color} />;
-                    },
-                    tabBarActiveTintColor: COLORS.primary,
-                    tabBarInactiveTintColor: COLORS.tabUnselectedGray,
-                })}>
-                <Tab.Screen
-                    name={HOME_SCREEN.MOVIE_SCREEN}
-                    component={MovieNavigator}
+            <Stack.Navigator
+                initialRouteName={HOME_SCREEN.MAIN_TABS}>
+                <Stack.Screen 
+                    name={HOME_SCREEN.MAIN_TABS}
+                    component={TabNavigator} 
                     options={{
                         headerShown: false,
-                    }}
+                      }}
                 />
-                <Tab.Screen
-                    name={HOME_SCREEN.FAVOURITE_MOVIE_SCREEN}
-                    component={FavouriteMovieNavigator}
+                <Stack.Screen 
+                    name={HOME_SCREEN.DETAILS_PAGE} 
+                    component={DetailsPage}
                     options={{
                         headerShown: false,
-                    }}
+                      }} 
                 />
-            </Tab.Navigator>
+            </Stack.Navigator>
         </NavigationContainer>
     )
 }
