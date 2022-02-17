@@ -1,13 +1,10 @@
 import React from 'react';
 import {
-    Image,
-    Text, 
     TextInput,
     TouchableOpacity, 
     View
 } from 'react-native';
 import { COLORS } from '../../utilities/colors';
-import LinearGradient from 'react-native-linear-gradient';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 import styles from './index.styles';
@@ -21,7 +18,7 @@ const CustomInput = (props) => {
     } = props;
 
     return (
-        <LinearGradient colors={[COLORS.white,COLORS.textInputGray]} style={styles.mainView}>
+        <View style={styles.mainView}>
             <View style={styles.textInputView}>
                 {
                     searchText == '' &&
@@ -44,7 +41,7 @@ const CustomInput = (props) => {
                     </TouchableOpacity>
                 }
             </View>
-        </LinearGradient>
+        </View>
     );
 };
 

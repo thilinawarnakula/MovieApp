@@ -13,6 +13,7 @@ const style = EStyleSheet.create({
         backgroundColor: COLORS.backgroundGray,
     },
     filterContainer:{
+        backgroundColor: COLORS.backgroundGray,
         alignItems:'center',
         marginTop : '20rem'
     },

@@ -16,16 +16,17 @@ const style = EStyleSheet.create({
     textInputView :{
         height: '55rem',
         width: entireScreenWidth - 40,
-        backgroundColor: COLORS.white,
+        backgroundColor: COLORS.backgroundGray,
         elevation: 10,
         flexDirection: 'row',
         justifyContent:'space-between',
         alignItems: 'center',
         shadowColor: COLORS.black,
         shadowOffset: {width: 2, height: 3},
-        shadowOpacity: 0.2,
+        shadowOpacity: 0.4,
         shadowRadius:2.62,
         paddingLeft: '20rem',
+        elevation : 8
     },
     input: {
         flex:9,
