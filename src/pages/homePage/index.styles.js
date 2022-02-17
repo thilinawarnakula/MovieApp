@@ -19,12 +19,12 @@ const styles = EStyleSheet.create({
   },
   indicatorStyle: {
     backgroundColor: COLORS.primary,
-    height: 3,
+    height: '3rem',
   },
   tabStyle: {
-    backgroundColor: COLORS.backgroundGray,
+    backgroundColor: COLORS.transparent,
     paddingHorizontal: '30rem',
-    marginTop: '5rem'
+    marginHorizontal : '70rem'
   },
   loadingView: {
     width: '60rem',
