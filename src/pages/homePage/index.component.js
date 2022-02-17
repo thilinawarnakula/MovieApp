@@ -83,12 +83,14 @@ const HomePage = (props) => {
     );
 
     const renderTabBar = (props) => (
-        <TabBar
-            {...props}
-            indicatorStyle={styles.indicatorStyle}
-            style={styles.tabStyle}
-            renderLabel={renderLabel}
-        />
+        <View style={styles.tabBarContainer}>
+            <TabBar
+                {...props}
+                indicatorStyle={styles.indicatorStyle}
+                style={styles.tabStyle}
+                renderLabel={renderLabel}
+            />
+        </View>
     );
 
     const renderTabView = () => (

@@ -40,7 +40,7 @@ const PageHeader = (props) => {
                     {
                         showBackIcon &&
                         <TouchableOpacity style={styles.backIconContainer} activeOpacity={0.6} onPress={onPress}>
-                            <Feather name={'arrow-left'} size={30} color={COLORS.black} />
+                            <Feather name={'arrow-left'} size={30} color={COLORS.primary} />
                         </TouchableOpacity>
                     }
                     <CustomTextView

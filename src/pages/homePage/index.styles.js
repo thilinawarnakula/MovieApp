@@ -24,7 +24,6 @@ const styles = EStyleSheet.create({
   tabStyle: {
     backgroundColor: COLORS.transparent,
     paddingHorizontal: '30rem',
-    marginHorizontal : '70rem'
   },
   loadingView: {
     width: '60rem',
@@ -32,6 +31,9 @@ const styles = EStyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  tabBarContainer:{
+    paddingHorizontal: '70rem'
+  }
 });
 
 export default styles;
